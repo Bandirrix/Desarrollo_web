@@ -8,12 +8,15 @@
         <p id="parrafo2">Este es el mejor...</p>
         <button id="boton1">Cambia el texto</button>
         <p id="parrafo-vacio"></p>
-        <button id="texto-random">Genera texto aquí</button>
+        <button id="boton2">Genera texto aquí</button>
         <script type="text/javascript">
             document.getElementById("boton1").onclick = function() {
                 // EN la primera parte despues de declarar la función, solo se accede al elemento
                 // La segunda ya es la accion que se realizará 
                 document.getElementById("parrafo2").innerHTML = document.getElementById("parrafo2").innerHTML + "Mejor día de mi vida";
+            }
+            document.getElementById("boton2").onclick = function() {
+                document.getElementById("parrafo-vacio").innerHTML = document.getElementById("parrafo-vacio").innerHTML + "<h1>Este es un texto autogenerado por una IA basica, que solo puede generar el mismo texto xd<h1/>";
             }
         </script>
     </body>
