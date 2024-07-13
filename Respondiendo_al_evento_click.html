@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respondiendo al evento click</title>
+</head>
+<body>
+    <p id="parrafo">Hola mundo tierra xd</p>
+    <button id="boton">Cambiar texto</button>
+    <script type="text/javascript">
+        document.getElementById("boton").onclick = function() {
+            // esta función modifica el texto de la etiqueta parrafp
+            document.getElementById("parrafo").innerHTML = "Hola que tal buenas tardes Banda"
+        }
+    </script>
+</body>
+</html>
