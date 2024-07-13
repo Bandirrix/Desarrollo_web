@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cambiando el contenido de la pagina web</title>
+    </head>
+    <body>
+        <p id="parrafo1">Hola que tal mi gente, aqui viendo la velada del año 4</p>
+        <p id="parrafo2">Este es el mejor...</p>
+        <button id="boton1">Cambia el texto</button>
+        <script type="text/javascript">
+            document.getElementById("boton1").onclick = function() {
+                document.getElementById("parrafo2").innerHTML = document.getElementById("parrafo2").innerHTML + "Mejor día de mi vida";
+            }
+
+        </script>
+    </body>
+</html>
