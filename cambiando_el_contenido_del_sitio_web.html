@@ -7,11 +7,14 @@
         <p id="parrafo1">Hola que tal mi gente, aqui viendo la velada del año 4</p>
         <p id="parrafo2">Este es el mejor...</p>
         <button id="boton1">Cambia el texto</button>
+        <p id="parrafo-vacio"></p>
+        <button id="texto-random">Genera texto aquí</button>
         <script type="text/javascript">
             document.getElementById("boton1").onclick = function() {
+                // EN la primera parte despues de declarar la función, solo se accede al elemento
+                // La segunda ya es la accion que se realizará 
                 document.getElementById("parrafo2").innerHTML = document.getElementById("parrafo2").innerHTML + "Mejor día de mi vida";
             }
-
         </script>
     </body>
 </html>
