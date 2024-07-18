@@ -9,7 +9,11 @@
     <p id="texto_estilo">Este texto se modificará por arte de magía</p>
     <button id="boton-estilo">Modificar estilo</button>
     <script type="text/javascript">
-        document.getElementById
+        document.getElementById("boton-estilo").onclick = function() {
+            document.getElementById("texto_estilo").style.color = "red";
+            document.getElementById("texto_estilo").style.fontSize = "150%";
+            document.getElementById("texto_estilo").style.fontWeight = "50";
+        }
     </script>
 </body>
 </html>
