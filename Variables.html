@@ -4,12 +4,22 @@
         <title>Variables</title>
     </head>
     <body>
-        
+        <input type="text" placeholder="Entrada usuario" id="usuario">
+        <button id="mostrar-mensaje">Login</button>
+        <p id="mensaje">Inicia sesión, por favor</p>
         <script type="text/javascript">
            /* var x=1;
             var y=1;
             var suma=x+y;
             alert(suma) */
+            var entrada = "";
+            
+            document.getElementById("mostrar-mensaje").onclick = function() {
+                entrada = document.getElementById("usuario").value;
+                document.getElementById("mensaje").innerHTML = document.getElementById("mensaje").innerHTML = "Bienvenido " +entrada; 
+
+            }
+         
         </script>
     </body>
 </html>
