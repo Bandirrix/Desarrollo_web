@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desapareciendo circulos fuck yeah</title>
+        <style type="text/css">
+            .circule {
+                width: 150px;
+                height: 150px;
+                float: left;
+                margin-right: 50px;
+                border-radius: 50%;
+            }
+            #circulo-rojo {
+                background-color: red;
+            }
+            #circulo-azul {
+                background-color: blue;
+            }
+            #circulo-verde {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circulo-rojo" class="circule"></div>
+        <div id="circulo-azul" class="circule"></div>
+        <div id="circulo-verde" class="circule"></div>
+        <script type="text/javascript">
+            document.getElementById("circulo-rojo").onclick = function(){
+                document.getElementById("circulo-rojo").style.display = "none";
+            }
+            document.getElementById("circulo-azul").onclick = function(){
+                document.getElementById("circulo-azul").style.display = "none";
+            }
+            document.getElementById("circulo-verde").onclick = function(){
+                document.getElementById("circulo-verde").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
