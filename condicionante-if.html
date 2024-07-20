@@ -9,22 +9,21 @@
     <input type="text" id="palabra" placeholder="Conoces la contraseña?">
     <button id="boton">Enviar</button>
     <script type="text/javascript"> 
-        var psw = "alakasam";
         document.getElementById("boton").onclick = function(){
+            var psw = "alakasam";
             var contra = "";
             var mensaje = "";
             contra = document.getElementById("palabra").value; 
             if (contra == psw)
             {
                 mensaje = "Puedes pasar";
-                
+                alert(mensaje);
             }
-            else (contra != psw)
+            else
             {
                 mensaje = "Contraseña incorrecta, prueba de nuevo";
-              
+                alert(mensaje);
             }
-            alert(mensaje);
         }
     //     var hora = 21;
     //     var saludo = ""; 
