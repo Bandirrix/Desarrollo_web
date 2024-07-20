@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionante IF</title>
+</head>
+<body>
+    <input type="text" id="palabra" placeholder="Conoces la contraseña?">
+    <button id="boton">Enviar</button>
+    <script type="text/javascript"> 
+        var psw = "alakasam";
+        document.getElementById("boton").onclick = function(){
+            var contra = "";
+            var mensaje = "";
+            contra = document.getElementById("palabra").value; 
+            if (contra == psw)
+            {
+                mensaje = "Puedes pasar";
+                alert(mensaje);
+            }
+            else (contra != psw)
+            {
+                mensaje = "Contraseña incorrecta, prueba de nuevo";
+                alert(mensaje);
+            }
+        }
+    //     var hora = 21;
+    //     var saludo = ""; 
+    //     if (hora<12)
+    // {
+    //     saludo = "Buenos días";
+    // }
+    //     else if (hora>12 & hora<24){
+    //         saludo = "Buenas tardes"
+    //     }
+    //     else {
+    //         saludo = "buenas noches";
+    //     }
+    //     alert(saludo);
+    </script>
+</body>
+</html>
