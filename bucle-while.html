@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bucle while</title>
+    </head>
+    <body>
+        <input type="text" id="dedos" placeholder="Ingresa el numero de dedos:">
+        <button id="boton">Click hereeeeeee</button>
+
+        <script type="text/javascript">
+            document.getElementById("boton").onclick = function() {
+                var n = 0;
+                var dedo = document.getElementById("dedos").value;
+                while (n != dedo)
+            {
+                alert("Me equivoqué, ese no era el numero:"+n);
+                // var dedo = document.getElementById("dedos").value;
+                n = Math.floor(Math.random()*dedo+1);
+                
+            }
+            alert("le atiné, el numero erá:" +n);
+        }
+        
+            /*var n = 0;
+            while (n<=5)
+        {
+            alert(n);
+            n++;
+        }
+        alert("Fin del ciclo, el numero es:" +n);*/
+
+        </script>
+    </body>
+</html>
