@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bucle while del instructor</title>
+    </head>
+    <body>
+        <h1>¿Cuantos dedos tienes?</h1>
+        <p>
+            <select id="numeroDedos">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <button id="adivinarBoton">!adivina</button>
+        </p>
+        <script type="text/javascript">
+            document.getElementById("adivinarBoton").onclick = function()
+            {
+
+                var miNumero = document.getElementById("numeroDedos").value;
+                var aciertoMaquina = false; //variable tipo booleana o logica (true o false)
+                var numeroIntentos = 1;
+
+                while (aciertoMaquina == false)
+                {
+                    var numeroMaquina = Math.floor(Math.random()*6);
+                // numeroMaquina = numeroMaquina*6;
+                // numeroMaquina = Math.floor(numeroMaquina);
+                    if (numeroMaquina == miNumero)
+                    {
+                        aciertoMaquina = true; //condición para salir del bucle
+                        alert("acerté El numero era "+numeroMaquina+". Me ha costado "+numeroIntentos+" intentos.");
+                    }
+                else {
+                    numeroIntentos = numeroIntentos +1;
+                    }
+                }
+            }
+            
+
+        </script>
+    </body>
+</html>
