@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comprueba tus reflejos</title>
+        <style type="text/css">
+            #forma
+            {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <p>Timpo de reacción</p>
+        <div id="forma"></div>
+        <script type="text/javascript">
+            document.getElementById("forma").onclick = function()
+            {
+                document.getElementById("forma").style.display = "none";
+            }
+
+        </script>
+    </body>
+</html>
