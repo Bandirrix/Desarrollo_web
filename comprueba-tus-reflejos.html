@@ -15,12 +15,16 @@
         </style>
     </head>
     <body>
-        <p>Timpo de reacción</p>
+        <p id="tiempoReaccion">Timpo de reacción </p>
         <div id="forma"></div>
         <script type="text/javascript">
+            var inicio = new Date().getTime(); // alcance global, ya que estan disponibles dede el inicio 
             document.getElementById("forma").onclick = function()
             {
                 document.getElementById("forma").style.display = "none";
+                var fin = new Date().getTime();
+                var diferencia = (fin - inicio)/1000;
+                document.getElementById("tiempoReaccion").innerHTML = document.getElementById("tiempoReaccion").innerHTML + diferencia + "s";
             }
 
         </script>
