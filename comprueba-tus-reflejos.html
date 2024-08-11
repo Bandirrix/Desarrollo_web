@@ -15,28 +15,12 @@
         </style>
     </head>
     <body>
-        <p>Timpo de reacción: <span id="tiempoReaccion"></span></p>
+        <p>Timpo de reacción</p>
         <div id="forma"></div>
         <script type="text/javascript">
-            var inicio = new Date().getTime(); // Alcance global que arroja el tiempo en milisegundos 
-            function aparecerforma()
-            {
-            document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
-            inicio = new Date().getTime();
-            }
-            function aparecerFormaDespuesDeRetraso ()
-            {
-                setTimeout(aparecerforma, Math.random()*2000);
-            }
-            aparecerFormaDespuesDeRetraso();
             document.getElementById("forma").onclick = function()
             {
                 document.getElementById("forma").style.display = "none";
-                var fin = new Date().getTime();
-                var diferencia = (fin-inicio)/1000; // Aqui se divide entre 1000 para convertir en segundos 
-                document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
-                setTimeout(aparecerforma,2000); // Establece un timer en el cual se usará la funcion "aparecerforma" en 2000 milisegundos
-                aparecerFormaDespuesDeRetraso();
             }
 
         </script>
