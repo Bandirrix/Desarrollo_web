@@ -10,20 +10,33 @@
                 width: 200px;
                 height: 200px;
                 background-color: blue;
+                position: relative;
+                top: 100px;
+                left: 100px; 
             
             }
         </style>
     </head>
     <body>
         <p>Timpo de reacción: <span id="tiempoReaccion"></span></p>
-        <p>Timpo de reacción</p>
         <div id="forma"></div>
         <script type="text/javascript">
             var inicio = new Date().getTime(); // Alcance global que arroja el tiempo en milisegundos 
             function aparecerforma()
             {
-            document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
-            inicio = new Date().getTime();
+                var top=Math.random()*400 + "px";
+                var left=Math.random()*400 + "px";
+                var width=(Math.random()*200)+100 +"px"; // Esta variable o que hace es que le da una anchura random entre 0 y 200 pero con el extra de darle 100px extras para que minimo sea 100px
+                
+                document.getElementById("forma").style.width = width;
+                document.getElementById("forma").style.height = width;
+
+                document.getElementById("forma").style.top = top;
+                document.getElementById("forma").style.left = left;
+
+                document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
+
+                inicio = new Date().getTime();
             }
             function aparecerFormaDespuesDeRetraso ()
             {
