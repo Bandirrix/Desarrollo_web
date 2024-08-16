@@ -22,6 +22,14 @@
         <div id="forma"></div>
         <script type="text/javascript">
             var inicio = new Date().getTime(); // Alcance global que arroja el tiempo en milisegundos 
+            function obtenerColorAleatorio() 
+            {
+                var letra = "0123456789ABCDEF".split("");
+                var color = "#";
+                for (var i = 0; i<6; i++){
+                    color += letra[Math.round(Math.random()*15)];
+                }
+            }
             function aparecerforma()
             {
                 var top=Math.random()*400 + "px";
