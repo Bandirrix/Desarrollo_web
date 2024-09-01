@@ -9,7 +9,7 @@
             {
                 width: 200px;
                 height: 200px;
-                /* background-color: blue; */
+                background-color: blue; 
                 position: relative;
                 top: 100px;
                 left: 100px; 
@@ -24,10 +24,9 @@
             var inicio = new Date().getTime(); // Alcance global que arroja el tiempo en milisegundos 
             function obtenerColorAleatorio() // Esta funcion genera un color random basandose en el sistema hexadecimal 
             {
-                var letra = '0123456789ABCDEF'.split('');
-                var color = '#';
-                for (var i = 0; i < 6; i+1)
-                {
+                var letra = "0123456789ABCDEF".split("");
+                var color = "#";
+                for (var i = 0; i < 6; i++){
                     color += letra[Math.round(Math.random()*15)];
                 }
                 return color;
@@ -40,13 +39,13 @@
                 var colorAleatorio = obtenerColorAleatorio();
                 
 
-                document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
+                
                 document.getElementById("forma").style.width = width;
                 document.getElementById("forma").style.height = width;
                 document.getElementById("forma").style.top = top;
                 document.getElementById("forma").style.left = left;
                 document.getElementById("forma").style.backgroundColor = colorAleatorio;
-                
+                document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
 
                 inicio = new Date().getTime();
             }
