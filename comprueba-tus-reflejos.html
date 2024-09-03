@@ -39,13 +39,13 @@
                 var colorAleatorio = obtenerColorAleatorio();
                 
 
-                
+                document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
                 document.getElementById("forma").style.width = width;
                 document.getElementById("forma").style.height = width;
                 document.getElementById("forma").style.top = top;
                 document.getElementById("forma").style.left = left;
                 document.getElementById("forma").style.backgroundColor = colorAleatorio;
-                document.getElementById("forma").style.display = "block"; // se declara una función donde se genera el cuadro de nuevo
+                
 
                 inicio = new Date().getTime();
             }
@@ -60,7 +60,7 @@
                 var fin = new Date().getTime();
                 var diferencia = (fin-inicio)/1000; // Aqui se divide entre 1000 para convertir en segundos 
                 document.getElementById("tiempoReaccion").innerHTML = diferencia + "s";
-                setTimeout(aparecerforma,2000); // Establece un timer en el cual se usará la funcion "aparecerforma" en 2000 milisegundos
+                // setTimeout(aparecerforma,2000); // Establece un timer en el cual se usará la funcion "aparecerforma" en 2000 milisegundos
                 aparecerFormaDespuesDeRetraso();
             }
 
