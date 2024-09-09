@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Detectando un click</title>
+        <script src="jQuery/jquery.min.js"></script>
+        <style type="text/css">
+            .forma{
+                height: 150px;
+                width: 150px;
+                position: relative;
+                margin: 10px;
+            }
+            #rojo{
+                background-color: red;
+                border-radius: 50%;
+            }
+            #azul{
+                background-color: blue;
+            }
+            #verde{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="forma" id="rojo"></div>
+        <div class="forma" id="azul"></div>
+        <div class="forma" id="verde"></div>
+        <script type="text/javascript">
+            $("#rojo").click(function(){
+                alert("Click en el circulo");
+            })
+            // $("#azul").click(function(){
+            //     alert("Click en el cuadrado");
+            // })
+            // $("#verde").click(function(){
+            //     alert("Click en el cuadrado");
+            // })
+            $("div").click(function()
+        {
+            alert("Este es un elemento div");
+        })
+        </script>
+    </body>
+</html>
