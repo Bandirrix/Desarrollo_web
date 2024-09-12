@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambiando el contenido del documento</title>
+        <script src="../jquery.min.js"></script>
+        <style type="text/css">
+            #circulo{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circulo"></div>
+        <p>Esto es un texto de prueba</p>
+        <iframe src="https://www.youtube.com/" frameborder="0"></iframe>
+        <script type="text/javascript">
+            // $("#circulo").click(function(){
+            //     $("p").html("Este es el texto de la nueva trasnformacion"); -----> En esta linea se cambia el texto de la etiqueta por el que se escribe cuando se da click en el circulo
+            // })
+
+            // $("#circulo").hover(function(){
+            // $("p").html("Este es el texto de la nueva trasnformacion"); -----> En esta linea se cambia el texto de la etiqueta por el que se escribe cuando se posiciona el cursor en el circulo
+            // })
+
+            $("#circulo").hover(function(){
+            $("iframe").attr("src","https://www.google.com"); //-----> En esta linea se cambia el atributro de la etiqueta iframe
+            })
+
+        </script>
+    </body>
+
+</html>
