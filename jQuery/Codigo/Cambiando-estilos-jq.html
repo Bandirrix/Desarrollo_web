@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cambiando el estilo de la pagina web</title>
+        <script src="../jquery.min.js"></script>
+        <style type="text/css">
+            #circulo{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+            .cuadrado{
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circulo"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        
+        <script type="text/javascript">
+            // $("div").click(function(){
+            //     // alert("Estás haciendo click sobre este circulo");
+            //     $("div").css("width", "100px");
+            //     $("div").css("height", "100px");
+            //     alert($("body").css("width"));
+            // })
+
+            // $("div").click(function(){
+            //     $(this).css("display", "none");
+            // })
+
+            $("div").click(function(){
+                if ($(this).attr("id") == "circulo")
+            {
+                alert("Hiciste click sobre un"+ $(this).attr("id"));
+            }
+            else
+            {
+                alert("Hiciste click sobre un cuadrado");
+            }
+            })
+        </script>
+    </body>
+</html>
