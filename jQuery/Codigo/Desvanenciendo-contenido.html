@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desvaneciendo el contenido </title>
+        <script src="../jquery.min.js"></script>
+        <style type="text/css">
+            #dos{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="uno">Esto es un texto efectivamente</p>
+        <!-- <p id="dos">Este parrafo está bien oculto xd</p> -->
+        <button id="boton1">Desvanecer/aparecer texto</button>
+        <button id="boton2">Estatus display</button>
+        <!-- <button id="boton2">Aparecer el texto xd</button> -->
+        <script type="text/javascript">
+            var mostrandotexto = true; // variable global
+            $("#boton1").click(function()
+        {
+            if (mostrandotexto) //esta se toma como el valor original de la variable global, en este caso está diciiendo que si la variable esta en true se ejecute el comando
+            {
+                $("#uno").fadeOut(function(){
+                    mostrandotexto = false; // En esta parte se asigan una funcion de "callback" para asignar acción despues de finalizar la accion de fadeOut
+                });
+            }
+            else {
+                $("#uno").fadeIn(function(){
+                    mostrandotexto = true;
+            });
+        }
+        })
+            // $("#boton1").click(function(){
+            //     if ($("#uno").css("display") == "block"){
+            //         $("#uno").fadeOut("slow");
+            //     }
+            //     else{
+            //         $("#uno").fadeIn("slow");
+            //     }
+            // })
+
+
+            //     $("#uno").fadeOut("slow");
+            // })
+            // $("#boton2").click(function(){
+            //     alert($("#uno").css("display")); -----> Esta funcion ayuda a poder apreciar si el atributo display esta en none o en block
+            // })
+
+
+
+            // $("#boton2").click(function(){
+            //     $("#dos").fadeIn("slow");
+            // })
+        </script>
+    </body>
+</html>
