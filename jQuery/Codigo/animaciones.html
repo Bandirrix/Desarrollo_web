@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animaciones con jQuery</title>
+        <script src="../jquery.min.js"></script>
+        <style type="text/css">
+            #circulo{
+                width: 150px;
+                height: 150px;
+                background-color: blueviolet;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circulo"></div>
+        <script type="text/javascript">
+            $("#circulo").click(function(){
+                $(this).animate(
+                    {
+                    width: "350px",
+                    height: "350px",
+                    marginLeft: "100px",
+                    marginTop: "100px",
+                    }, 2000 /*milisegundos*/, function(){$(this).css("background-color", "red");} //funcion callback. Esta es cuando el atributo permite agregar una funcion extra al terminar la acción aplicada
+                );
+            })
+        </script>
+    </body>
+</html>
