@@ -16,7 +16,7 @@ print(resultado)
 resultado = texto.split() #Separa las palabras de una variable en elementos de lista. En este caso, se deja vacio el parentesis y automaticamente usa el espacio como separador
 print(resultado)
 resultado = texto.split("t") #Separa las palabras de una variable en elementos de lista. En este caso, el parentsis usa el caracter como separador
-print(resultado)
+print(resultad) 
 
 a="Aprender"
 b="Python"
