@@ -31,3 +31,6 @@ lista.sort() #ordena alfabeticamente
 print(lista)
 lista.reverse() #Ordena los valores de manera inversa, de mayor a menor
 print(lista)
+letras = input('Ingresa aqui tus letras: ')
+letras = letras.split() #Con el metodo 
+# print("Hemos encontrado la cantidad de letras " +lista_letras[2]+ " de: {}".format(texto_min.count(lista_letras[2]))) >>> Se puede hacer el uso del metodo count para contar un cierto carcater o palabra
