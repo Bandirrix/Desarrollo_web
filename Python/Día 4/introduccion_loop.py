@@ -25,7 +25,7 @@ mi_valor = 0
 for numero in numeros:
     mi_valor = mi_valor + numero # por cada vuelta va sumando y almacenando el valor de la vuelta
     print(mi_valor)                              #Aquí es importante tener en cuenta la identación de las cosas, ya que este print es el mismo que el siguiente, pero al estat dentr del ciclo, va imprimiendo el valor en cada vuelta, siendo que el siguiente solo imprime el valor final
-print(f"El valor final de esto es: {mi_valor}") 
+print(f"El valor final de esto es: {mi_valor}") #Aqui es importante la identación ya que si estuviera puesto al nivel del if, se imprimiría en cada vuelta
 
 for a in "pythoon": #Se puede poner directamente el objeto a iterar dentro del mismo ciclo for
     print(a)
@@ -33,7 +33,7 @@ for a in "pythoon": #Se puede poner directamente el objeto a iterar dentro del m
 for b in [1,2,3,4,5]:
     print(b)
 
-for c,d in [[1,2],[3,4],[5,6]]: #Se puede hacer una doble iteracion en una vuelta, con el primer variable le el primer valor de la lista y el otro con la siguiente
+for c,d in [[1,2],[3,4],[5,6]]: #Se puede hacer una doble iteracion en una vuelta, con el primer variable el primer valor de la lista y el otro con la siguiente
     print(c)
     print(d)
 
