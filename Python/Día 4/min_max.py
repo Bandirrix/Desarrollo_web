@@ -16,4 +16,4 @@ dic= {'C1':45,'C2':11}
 print(min(dic)) #Busca en base a las claves
 
 dic= {'C1':45,'C2':11}
-print(min(dic.values())) #Si prefieres buscar en lugar de eso por los valores, lo que hay que hacer es poner el .value
+print(min(dic.values())) #Si prefieres buscar en lugar de eso por los valores, lo que hay que hacer es poner el .value  
