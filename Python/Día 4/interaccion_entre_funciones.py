@@ -1,7 +1,7 @@
 from random import shuffle
 
 # Crear un alista inicial con el contenido de los palitos
-palitos = ['-', '--', '---','----']
+palitos = ['-', '--', '---', '----']
 
 # Mezclar los palitos
 def mezclar (lista):
