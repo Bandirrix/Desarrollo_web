@@ -5,6 +5,7 @@ def organizar_letras (palabra):
     lista = set(lista)
     lista = list(lista)
     lista.sort()
-    print(lista)
+    
+    return lista
 
-organizar_letras("perro")
+print(organizar_letras("perro"))

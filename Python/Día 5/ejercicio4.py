@@ -1,15 +1,20 @@
 def contar_primos(numero):
-    lista = []
-    lista = list(range(numero+1))
-    print(lista)
+    primos = [2]
+    iteracion = 3
+    if numero < 2:
+        return 0
+    
+    while iteracion <= numero:
+        for n in range(3,iteracion,2):
+            if iteracion % n == 0:
+                iteracion +=2
+                break
+        else:
+            primos.append(iteracion)
+            iteracion +=2
+    
+    print(primos)
+    return len(primos)
 
-def es_primo(numero):
-    if numero <= 1:
-        return False
-    for i in range(2, int(numero**0.5)+1):
-        if numero % i == 0:
-            return False
-    return True
 
-
-contar_primos(20)
+print(contar_primos(20))  
