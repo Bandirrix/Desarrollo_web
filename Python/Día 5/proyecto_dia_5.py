@@ -20,6 +20,10 @@ from random import *
 print("Bienvenido al juego del 'Ahorcado'. \nEstás listo para comenzar??")
 palabras_secretas = ["carro", "cama","programar", "laptop", "silla"]
 palabra_random  = choice(palabras_secretas)
+print(palabra_random)
+contador_vidas = len(palabra_random)
+print(contador_vidas)
+
 
 def mostrar_palabra ():
     print("La palabra del juego ha sido escogida satisfactoriamente. \nA continuación te apareceran los espacios correspondientes:")
@@ -30,12 +34,30 @@ def mostrar_palabra ():
 
     print(" ".join(lista))
     return lista
+ 
+def verificacion_letra ():
+    letra =  input("Elige una letra: ")
+    if letra in palabra_random:
+        print("la letra sí está correcta")
+        return True
+    else: 
+        print("está mal")
+        return False
+        
+mostrar_palabra()     
+while contador_vidas != 0:
+    if verificacion_letra() == True:
+        print("Nose")
+    else:
+        contador_vidas -= 1
+        print(contador_vidas)
 
-# funcion para pedir la letra a analizar 
-# funcion para poder analizar la letra 
+    #for letra in pala
+    # funcion para pedir la letra a analizar 
+    # funcion para poder analizar la letra 
 # funcion para modificar la lista con los aciertos 
 # funcion para quitar vidas del contador 
 # funcion para poder mostrar el resultado 
 
-mostrar_palabra()
+
 
