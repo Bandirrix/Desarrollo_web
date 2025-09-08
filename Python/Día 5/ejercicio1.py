@@ -12,4 +12,4 @@ def devolver_distintos(num1, num2, num3):
     elif suma > 9 and suma < 16:
         print(lista[1])
 
-devolver_distintos(0,10,9)
+devolver_distintos(0,10,9)  
