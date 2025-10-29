@@ -40,10 +40,7 @@ def verificacion_letra ():
     if letra in palabra_random:
         print("la letra sí está correcta")
         return True
-    else:  
-        print("está mal")
-        return False
-        
+       
 mostrar_palabra()     
 while contador_vidas != 0:
     if verificacion_letra() == True:
