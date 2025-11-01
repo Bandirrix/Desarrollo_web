@@ -19,3 +19,8 @@ for txt in Path(guia3).glob('*.txt'): #glob engloba lo que haya dentro de una ca
     print(txt)
 for txt in Path(guia3).glob('**/*.txt'): #**/* incluye todas las carpetas y subcarpetas dentro de la carpeta elegida 
     print(txt)
+
+en_europa = guia.relative_to(Path('Europa')) #Crea rutas relativas a un punto especifico hacia "abajo", caso contrario a parent
+en_spania = guia.relative_to(Path('Europa', 'España'))
+print(en_europa)
+print(en_spania)
