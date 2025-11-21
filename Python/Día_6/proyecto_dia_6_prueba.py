@@ -51,6 +51,56 @@ def leer_receta(receta_elegida):
 
     return
 
+def crear_receta(ruta_relat):
+    nombre = input("Cómo deseas que se llame la receta?: ")
+    nombre = nombre + '.txt'
+    print(nombre)
+    ruta_archivo = Path(ruta_relat / nombre)
+    archivo = open(ruta_archivo, 'w')
+
+    return
+
+def escribir_en_receta(ruta_archivo):
+    ruta = Path(ruta_archivo)
+    archivo = open(ruta, 'w')
+    anw = ''
+    archivo.write(input('\nAñade una linea de texto: '))
+    archivo.close()
+    return
+
+def nombre_categoria():
+    nombre_carpeta = input("Escribe el nombre de la categoria que deseas. En lugar de espacios, usa '_': ")
+
+    return nombre_categoria
+
+def crear_categoria(nombre_categoria):
+    carpeta = os.makedirs(Path(base / nombre_categoria))
+    print('Listo, te muestro las categoria que tienes actualmente...')
+    for cpt in Path(base).glob('*'):
+        print(cpt)
+    return
+
+def eliminar_receta(ruta_relat):
+    ruta_actual = Path(ruta_relat)
+    if ruta_actual.exists():
+        ruta_actual.unlink()
+        print(f'El archivo en la ruta {ruta_actual} se ha borrado con exito ')
+    else:
+        print(f'El archivo en la ruta {ruta_actual} no existe ') 
+    
+    return
+
+def eliminar_categoria(ruta_relat): 
+    ruta_actual = Path(ruta_relat)
+    if ruta_actual.exists():
+        os.rmdir(Path(ruta_actual))
+        print(f'La categoria en la ruta {ruta_actual} se ha borrado con exito ')
+    else:
+        print(f'La categoria en la ruta {ruta_actual} no existe ')
+
+
+
+
 
 
 
