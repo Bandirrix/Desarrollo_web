@@ -12,7 +12,7 @@ print(f"Tienes {num_recetas} recetas")
 opciones = ['1. Leer receta', '2. Crear receta', '3. Crear categoria', '4. Eliminar receta', '5. Eliminar categoria', '6. Finalizar programa']
 ruta_interna = '' 
 
-def escoger_categoria (opciones):
+def escoger_opcion (opciones):
     for i in opciones:
         print(i)
     eleccion = input("¿Qué opción escoges?: ")
@@ -27,7 +27,6 @@ def elegir_categoria ():
     elec_categoria = input('Escribe el nombre de la categoria que deseas elegir tal cual se muestra:  ')
     elec_categoria = elec_categoria.strip()
     ruta_relat = Path(ruta_base / elec_categoria )
-    print(ruta_relat)
     # Meter si quiero el numero de la categoria o el nombre de la categoria y devolver eso para la siguiente, ya que necesito la ruta de al cual quiero hacer uso 
     # Meter if para obtner la ruta y pasarla 
     return ruta_relat
@@ -35,7 +34,7 @@ def elegir_categoria ():
 def mostrar_recetas (entrada_x):
     ruta_interna = Path(entrada_x)
     lista_recetas = [] #Lista para guardar los nombres de los archivos y poder sacar la ruta
-    for txt in Path(ruta_interna).glob('*/.txt'):
+    for txt in Path(ruta_interna).glob('*.txt'):
         print(txt)
     return lista_recetas
 
@@ -56,9 +55,8 @@ def crear_receta(ruta_relat):
     nombre = nombre + '.txt'
     print(nombre)
     ruta_archivo = Path(ruta_relat / nombre)
-    archivo = open(ruta_archivo, 'w')
 
-    return
+    return ruta_archivo
 
 def escribir_en_receta(ruta_archivo):
     ruta = Path(ruta_archivo)
@@ -71,32 +69,71 @@ def escribir_en_receta(ruta_archivo):
 def nombre_categoria():
     nombre_carpeta = input("Escribe el nombre de la categoria que deseas. En lugar de espacios, usa '_': ")
 
-    return nombre_categoria
+    return nombre_carpeta
 
-def crear_categoria(nombre_categoria):
-    carpeta = os.makedirs(Path(base / nombre_categoria))
+def crear_categoria(nombre_carpeta):
+    carpeta = Path(ruta_base,nombre_carpeta)
+    os.makedirs(Path(carpeta))
     print('Listo, te muestro las categoria que tienes actualmente...')
-    for cpt in Path(base).glob('*'):
+    for cpt in Path(ruta_base).glob('*'):
         print(cpt)
     return
 
 def eliminar_receta(ruta_relat):
-    ruta_actual = Path(ruta_relat)
-    if ruta_actual.exists():
-        ruta_actual.unlink()
-        print(f'El archivo en la ruta {ruta_actual} se ha borrado con exito ')
+    ruta_actual_defi = Path(ruta_relat)
+    if ruta_actual_defi.exists():
+        ruta_actual_defi.unlink()
+        print(f'El archivo en la ruta {ruta_actual_defi} se ha borrado con exito ')
     else:
-        print(f'El archivo en la ruta {ruta_actual} no existe ') 
+        print(f'El archivo en la ruta {ruta_actual_defi} no existe ') 
     
     return
 
 def eliminar_categoria(ruta_relat): 
-    ruta_actual = Path(ruta_relat)
-    if ruta_actual.exists():
-        os.rmdir(Path(ruta_actual))
-        print(f'La categoria en la ruta {ruta_actual} se ha borrado con exito ')
+    ruta_actual_defi = Path(ruta_relat)
+    if ruta_actual_defi.exists():
+        os.rmdir(Path(ruta_actual_defi))
+        print(f'La categoria en la ruta {ruta_actual_defi} se ha borrado con exito ')
     else:
-        print(f'La categoria en la ruta {ruta_actual} no existe ')
+        print(f'La categoria en la ruta {ruta_actual_defi} no existe ')
+
+def mostrar_categorias():
+    print('Aquí se muestran las categorias actuales: ')
+    for carpeta in Path(ruta_base).glob('*'):
+        print(os.path.basename(carpeta))
+    return
+
+while True:
+    primer_eleccion = escoger_opcion(opciones)
+    primer_eleccion = int(primer_eleccion)
+    if primer_eleccion == 1 :
+        ruta_relat_int = elegir_categoria()
+        lista_recetas_int = mostrar_recetas(ruta_relat_int)
+        receta_elegida_int = escoger_receta(lista_recetas_int, ruta_relat_int)
+        leer_receta(receta_elegida_int)
+    elif primer_eleccion == 2:
+        ruta_relat_int = elegir_categoria()
+        ruta_archivo_int = crear_receta(ruta_relat_int)
+        escribir_en_receta(ruta_archivo_int)
+    elif primer_eleccion == 3:
+        nombre_carpeta_int = nombre_categoria()
+        crear_categoria(nombre_carpeta_int)
+        mostrar_categorias()
+    elif primer_eleccion == 4:
+        ruta_relat_int = elegir_categoria()
+        lista_recetas_int = mostrar_recetas(ruta_relat_int)
+        receta_elegida_int = escoger_receta(lista_recetas_int, ruta_relat_int)
+        print(receta_elegida_int)
+        eliminar_receta(receta_elegida_int)
+    elif primer_eleccion == 5:
+        ruta_relat_int = elegir_categoria()
+        print(ruta_relat_int)
+        eliminar_categoria(ruta_relat_int)
+    elif primer_eleccion == 6:
+        break
+
+
+    
 
 
 
@@ -106,6 +143,4 @@ def eliminar_categoria(ruta_relat):
 
 
 
-
-
-mostrar_recetas(ruta_base)
+ 
