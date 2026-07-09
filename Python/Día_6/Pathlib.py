@@ -9,7 +9,7 @@ print(carpeta.name) #Obtener el nombre del archivo
 print(carpeta.suffix) #Obtener el tipo del archivo
 print(carpeta.stem) #Obtener el nombre del archivo sin la terminacion de este
 
-if not carpeta.exists(): #Verificar si esxiste un archivo se usa el metodo exists()
+if not carpeta.exists(): #Verificar si existe un archivo se usa el metodo exists()
     print('Este archivo no existe')
 else:
     print("Sí existe, yeah!")

@@ -5,7 +5,7 @@ archivo.write('soy la nueva linea')               #Al querer escribrir con el me
 archivo.close()'''
 
 archivo = open('Python\Día_6\prueba1.txt', 'w') #Con esta linea si no existe el archivo, lo crea. y si ya exite el archivo, lo sobreescribe 
-archivo.write('Soy una nueva linea de texto \n') # Si no pones alto de linea, el texto se concatena luego luego del otro
+archivo.write('Soy una nueva linea de texto \n') # Si no pones salto de linea, el texto se concatena luego luego del otro
 archivo.write('''YO 
               iguanas  
               ranas''') #Así escribes con saltos de linea directamente 

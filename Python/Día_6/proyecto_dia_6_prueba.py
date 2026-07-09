@@ -1,5 +1,6 @@
 from pathlib import Path
 import os 
+from os import system #Aqui usaremos la libreria system para usar el limpiar pantallas
 
 print('Bienvenida/o a tu recetario de pura calidad ')
 base = Path.home()
@@ -13,6 +14,8 @@ opciones = ['1. Leer receta', '2. Crear receta', '3. Crear categoria', '4. Elimi
 ruta_interna = '' 
 
 def escoger_opcion (opciones):
+   # 
+   #  system('cls') #Limpia la pantalla cada ve que lo ejecutas
     for i in opciones:
         print(i)
     eleccion = input("¿Qué opción escoges?: ")
