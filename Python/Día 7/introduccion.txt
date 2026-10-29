@@ -1,0 +1,9 @@
+object Oriented programing 
+EL codigo que define a un objeto se llama clase por ejemplo 'pajaro'
+Los 'atributos' son las caracteristicas que tiene dicha clase (parametros)
+    Edad, color, tramaño
+Las acciones que dicha clase puede hacer se le conoce como 'métodos'
+    Volar, comer, caminar
+Dentro del objeto abstracto de una clase, se pueden tener diferentes entidades o instancias que se llaman 'objetos'
+    Loro, canario, conguita
+
